@@ -6,23 +6,16 @@ y = x - 1
 if x == 0 || x > 25 
     puts "... fucking badass ... play again !"
 else
-    x.times do |n|
-        if n == 0
-            y.times do
-                print " "
-            end
-            y -= 1
-            puts "#"  
-        elsif
-            y.times do
-                print " "
-            end
-            y -= 1
-            v =  n*2
-            v.times do
-                print "#"
-            end
-            puts "#"   
+    1.upto(x) do |k|
+        1.upto(y) do
+            print " "
         end
+    y -= 1
+        if k != 1
+           k *= 2
+           k -= 1
+        end
+    k.times {print "#"}
+    puts 
     end
 end
