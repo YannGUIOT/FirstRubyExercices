@@ -1,16 +1,17 @@
 print "Entre un nombre entre 1 et 25 : "
 x = gets.to_i
-y = x - 1
 
 if x == 0 || x > 25 
-    puts "... fucking badass ... play again !"
+    puts
+    puts "     ... fucking badass ... play again !"
+    puts
 else
+    puts
     1.upto(x) do |k|
-        1.upto(y) do
-            print " "
-        end
-    y -= 1
+        y = x - k
+        y.times {print " "}
     k.times {print "#"}
     puts 
     end
+    puts
 end
